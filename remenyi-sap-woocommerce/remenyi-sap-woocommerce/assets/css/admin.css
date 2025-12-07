@@ -1,0 +1,273 @@
+/**
+ * Reményi SAP WooCommerce Admin Styles
+ */
+
+/* General */
+.remenyi-sap-wrap {
+    max-width: 1200px;
+}
+
+/* Status indicators */
+.status-success {
+    color: #28a745;
+}
+
+.status-error {
+    color: #dc3545;
+}
+
+.status-warning {
+    color: #ffc107;
+}
+
+.status-pending {
+    color: #6c757d;
+}
+
+/* Connection test */
+#connection-status {
+    margin-left: 10px;
+    font-weight: 600;
+}
+
+#connection-status.success {
+    color: #28a745;
+}
+
+#connection-status.error {
+    color: #dc3545;
+}
+
+/* Sync status */
+#sync-status .spinner {
+    margin-right: 10px;
+}
+
+#sync-result .notice {
+    margin-top: 0;
+}
+
+/* Manual sync buttons */
+.manual-sync {
+    min-width: 150px;
+}
+
+.manual-sync.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+/* Tables */
+.widefat th,
+.widefat td {
+    vertical-align: middle;
+}
+
+/* Log types */
+.log-type {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.log-type-error {
+    background: #dc3545;
+    color: white;
+}
+
+.log-type-warning {
+    background: #ffc107;
+    color: #212529;
+}
+
+.log-type-info {
+    background: #17a2b8;
+    color: white;
+}
+
+.log-type-debug {
+    background: #6c757d;
+    color: white;
+}
+
+.log-type-sync {
+    background: #28a745;
+    color: white;
+}
+
+.log-type-order {
+    background: #6f42c1;
+    color: white;
+}
+
+.log-type-stock {
+    background: #fd7e14;
+    color: white;
+}
+
+.log-type-customer {
+    background: #20c997;
+    color: white;
+}
+
+.log-type-product {
+    background: #e83e8c;
+    color: white;
+}
+
+/* Context modal */
+#context-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 100000;
+    display: none;
+}
+
+.context-modal-content {
+    background: white;
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 25px;
+    border-radius: 8px;
+    max-height: calc(100vh - 100px);
+    overflow: auto;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+}
+
+.context-modal-close {
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+    line-height: 1;
+    color: #666;
+    transition: color 0.2s;
+}
+
+.context-modal-close:hover {
+    color: #000;
+}
+
+.context-modal-content h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+#context-data {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 4px;
+    overflow: auto;
+    max-height: 500px;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* SAP Order Info Box */
+.sap-order-info {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-left: 4px solid #0073aa;
+    border-radius: 0 4px 4px 0;
+}
+
+.sap-order-info h4 {
+    margin: 0 0 10px;
+    color: #0073aa;
+}
+
+.sap-order-info p {
+    margin: 5px 0;
+}
+
+/* Pagination */
+.tablenav-pages a {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0 2px;
+    text-decoration: none;
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.tablenav-pages a.current {
+    background: #0073aa;
+    color: white;
+}
+
+.tablenav-pages a:hover:not(.current) {
+    background: #ddd;
+}
+
+/* Nav tabs enhancement */
+.nav-tab-wrapper {
+    margin-bottom: 20px;
+}
+
+.tab-content {
+    background: white;
+    padding: 20px;
+    border: 1px solid #ccd0d4;
+    border-top: none;
+}
+
+/* Form table enhancements */
+.form-table th {
+    width: 250px;
+}
+
+.form-table .description {
+    color: #666;
+    font-style: italic;
+}
+
+/* Button loading state */
+.button.loading {
+    position: relative;
+    color: transparent;
+}
+
+.button.loading::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    margin-left: -8px;
+    margin-top: -8px;
+    border: 2px solid #ccc;
+    border-top-color: #0073aa;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive */
+@media screen and (max-width: 782px) {
+    .form-table th {
+        width: 100%;
+    }
+
+    .context-modal-content {
+        margin: 20px;
+        max-height: calc(100vh - 40px);
+    }
+}
